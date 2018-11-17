@@ -1,0 +1,219 @@
+/* 需要引入公共样式在index.less里面引入  就没有必要在页面中引入多个文件减少请求*/
+
+@import 'base.less';
+@main-color: #d30775;
+
+/* 轮播图区域的样式 */
+
+#header {
+    padding: 0 0.3125rem;
+    display: flex;
+    h4 {
+        height: 1.40625rem;
+        width: 1.40625rem;
+        line-height: 1.40625rem;
+        color: @main-color;
+        font-size: 0.4375rem;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 54px;
+            top: 37px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid @main-color !important;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+        }
+    }
+    >span {
+        flex: 1;
+        height: 1.40625rem;
+        line-height: 1.40625rem;
+        text-align: center;
+        font-size: 0.5625rem;
+        color: #1d1a1d;
+    }
+    i {
+        height: 1.40625rem;
+        line-height: 1.40625rem;
+        img {
+            width: 0.78125rem;
+            height: 0.78125rem;
+        }
+    }
+}
+
+
+/*轮播图*/
+
+#slide {
+    .swiper-slide {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+/*<!-- 导航栏区域 -->*/
+
+#nav {
+    padding: 0.25rem 0.25rem;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 33.33%;
+            margin-bottom: 0.125rem;
+            a {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &:nth-child(2),
+            {
+                padding: 0 0.125rem;
+            }
+            &:nth-child(5),
+            {
+                padding: 0 0.125rem;
+            }
+        }
+    }
+}
+
+
+/*服务导航栏区域*/
+
+#subnav {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 25%;
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                p {}
+            }
+        }
+    }
+}
+
+// 驴悦亲子
+#centent {
+    /*这里有问题 等一下在调*/
+    // padding-bottom: 4.6875rem;
+    // padding-top: 0.3125rem;
+    background-color: #f1f1f1;
+    display: flex;
+    .left {
+        flex: 1;
+        a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            img {
+                width: 100%;
+                // height: 200%;
+            }
+        }
+    }
+    .right {
+        flex: 1;
+        a {
+            display: block;
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/*热门活动*/
+
+#hotpaly {
+    h4 {
+        padding: 0 0 0.125rem 0.3125rem;
+        color: #ccc;
+        font-size: 0.4375rem;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/*假期活动 */
+
+#holidayHotpaly {
+    .title {
+        display: flex;
+        a {
+            height: 0.6875rem;
+            line-height: 0.6875rem;
+            border-bottom: 1px solid #d3079e;
+            color: #d3079e;
+            flex: 1;
+            text-align: center;
+        }
+    }
+    .centent {
+        width: 100%;
+        background-color: #f7f7f7;
+        li {
+            padding-top: 10px;
+            // width: 100%;
+            img {
+                width: 100%;
+            }
+            p {
+                background-color: #fff;
+                font-size: 12px;
+            }
+        }
+    }
+    .lookMore {
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        margin-bottom: 20px;
+        span {
+            margin-left: 10px;
+        }
+    }
+}
+
+
+/* 底部区域*/
+
+#footer {
+    ul {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+        background-color: @main-color;
+        li {
+          margin-right: 10px;
+            float: left;
+            a {}
+        }
+        .right {
+            float: right;
+        }
+    }
+}
+
+
+/* 导航区域的样式 */

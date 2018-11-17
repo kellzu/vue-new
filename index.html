@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 设置视口宽度等于设备的真实宽度 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>text 陈友足</title>
+    <!-- 1. 引入swiper的CSS -->
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css">
+    <!-- 1. 引入主页less文件 -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 2. 引入less.js的编译器文件 -->
+    <script src="lib/less/less.js"></script>
+    <script>
+    setHtmlFontSize();
+
+    function setHtmlFontSize() {
+        // 1. 获取当前页面的宽度
+        var windowWidth = window.innerWidth;
+        // 2. 计算当前屏幕宽度需要设置的字体大小
+        var htmlFontSize = windowWidth / 10;
+        // 3. 把计算结果设置给html
+        document.querySelector('html').style.fontSize = htmlFontSize + 'px';
+    }
+    window.addEventListener('resize', setHtmlFontSize);
+    </script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <h4 class="zuobiao">上海</h4>
+        <span class="title">驴妈妈旅游网</span>
+        <i class="icon-user-info">
+        <img src="images/icon/my.png"  alt="">
+    </i>
+    </header>
+    <!-- 轮播图区域 -->
+    <section id="slide">
+        <!-- 2. 写结构 swiper规定的结构 有对应的样式的 -->
+        <!-- swiper的大容器 -->
+        <div class="swiper-container">
+            <!-- swiper的所有图片的容器 -->
+            <div class="swiper-wrapper">
+                <!-- 每一张图片容器 -->
+                <div class="swiper-slide">
+                    <!-- 这里面就是真实放图片标签的位置 -->
+                    <img src="images/img/banner1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img/banner2.jpg"  alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img/banner3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <!-- 这里面就是真实放图片标签的位置 -->
+                    <img src="images/img/banner4.jpg"  alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img/banner5.jpg"  alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img/banner6.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/img/banner7.jpg" alt="">
+                </div>
+            </div>
+            <!-- 小圆点容器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 左右箭头-->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+            <!-- 滚动条 -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+    </section>
+    <!-- 景点导航栏区域 -->
+    <nav id="nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/icon/nav1.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/icon/nav2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/icon/nav3.png"alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/icon/nav4.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/icon/nav5.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/icon/nav6.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav id="subnav">
+        <ul>
+            <li>
+                <a href="#" class="br bt">
+                    <img src="images/icon/j1.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="br bt">
+                    <img src="images/icon/j2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="br bt">
+                    <img src="images/icon/j3.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#" class=" bt">
+                    <img src="images/icon/j4.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="br bt bb">
+                    <img src="images/icon/j5.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="br bt bb">
+                    <img src="images/icon/j6.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="br bt bb">
+                    <img src="images/icon/j7.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#" class=" bt bb">
+                    <img src="images/icon/j8.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--驴悦亲子  -->
+    <section id="centent">
+        <div class="left br bb">
+           <a href="#"> <img  src="images/img/t1.jpg"  alt=""></a>
+        </div>
+        <div class="right ">
+           <a href="#"> <img class="bb" src="images/img/t2.jpg"  alt=""></a>
+            <a href="#"><img class="bb" src="images/img/t3.jpg" alt=""></a>
+        </div>
+    </section>
+    <!-- 热门活动 -->
+    <section id="hotpaly">
+        <h4 class="title">热门活动</h4>
+        <ul>
+            <li>
+                <img class="bt bb" src="images/img/r1.jpg" alt="">
+            </li>
+            <li>
+                <img class=" bb" src="images/img/r2.jpg"  alt="">
+            </li>
+            <li>
+                <img class=" bb" src="images/img/r3.jpg"  alt="">
+            </li>
+            <li>
+                <img class=" bb" src="images/img/r4.jpg" alt="">
+            </li>
+        </ul>
+    </section>
+    <!-- 假期活动 -->
+    <section id="holidayHotpaly">
+        <div class="title">
+            <a href="#"><span>度周末</span></a>
+            <a href="#"><span>度长假</span></a>
+        </div>
+        <ul class="centent">
+            <li class="bt">
+            <img src="images/img/zm1.jpg" alt="">
+            <p>[热门活动]驴妈妈温泉季</p>
+            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全心为你,5折整点秒杀,立减高达100元</p>            
+            </li>
+            <li class="bt">
+            <img src="images/img/zm2.jpg" alt="">
+            <p>[热门活动]驴妈妈温泉季</p>
+            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全心为你,5折整点秒杀,立减高达100元</p>            
+            </li>
+                        <li class="bt">
+            <img src="images/img/zm3.jpg" alt="">
+            <p>[热门活动]驴妈妈温泉季</p>
+            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全心为你,5折整点秒杀,立减高达100元</p>            
+            </li>
+                        <li class="bt">
+            <img src="images/img/zm4.jpg" alt="">
+            <p>[热门活动]驴妈妈温泉季</p>
+            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全心为你,5折整点秒杀,立减高达100元</p>            
+            </li>
+                        <li class="bt">
+            <img src="images/img/zm5.jpg" alt="">
+            <p>[热门活动]驴妈妈温泉季</p>
+            <p>听音乐,泡温泉,就找驴妈妈,泉新玩法,全心为你,5折整点秒杀,立减高达100元</p>            
+            </li>
+        </ul>
+        <div class="lookMore bb">
+            <span>查看更多</span><span>∨</span>
+        </div>
+
+    </section>
+    <!-- 底部区域 -->
+    <footer id="footer">
+    <ul>
+        <li><a href="#">免费注册</a></li>
+        <li><a href="#">登录</a></li>
+        <li class="right"><a href="#">TOP</a></li>
+    </ul>
+
+    </footer>
+    <!-- 1. 引入swiper的js -->
+    <script src="lib/swiper/js/swiper.js"></script>
+    <!-- 3. 引入主页的JS文件    -->
+    <script src="js/index.js"></script>
+    <!-- 4. 引入zepto插件 -->
+    <script src="lib/zepto/zepto.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        // 控制轮播图滚动的方向 horizontal水平 vertical 垂直
+        // direction: 'horizontal',
+        //可以支持多个swiper-slide 可以有多个轮播图
+        slidesPerView: 'auto',
+        //支持弹簧
+        freeMode: true,
+        //控制轮播图动画切换的速度  轮播图动画的时间
+        speed: 3000,
+        //添加一个小手
+        grabCursor: true,
+        // 添加循环 无缝轮播图 
+        loop: true,
+        //添加自动轮播图 delay自动轮播的间隔时间
+        autoplay: {
+            delay: 1000,
+            //到最后一张停止自动轮播图 但是loop了后就停不下来了
+            stopOnLastSlide: true,
+            // 是否要当触摸的时候禁止自动轮播图  ture就禁止 false不禁止
+            disableOnInteraction: false,
+        },
+        // 给图片直接添加间距
+        // spaceBetween : 100,
+        // 如果需要分页器  小圆点
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        // 如果需要前进后退按钮  左右箭头
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        //支持鼠标滚轮  只有PC能用
+        mousewheel: true,
+    });
+    </script>
+</body>
+
+</html>
+<!-- <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            内容或者图片
+        </div>
+    </div>
+</div> -->
+<!-- 4. 如果滚动还需要设置样式
+  .swiper-container{
+      height:100%;
+  } 
+  body,html父元素等都要设置100%高度
+  .swiper-slide 高度自动
+5. 对轮播图插件去初始化
+    // 3. 初始化swiper的滑动 -->
